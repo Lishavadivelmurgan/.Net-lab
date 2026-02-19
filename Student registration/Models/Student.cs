@@ -1,0 +1,15 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Contracts;
+
+namespace WebApplication1.Models
+{
+    public class Student
+    {
+        [Required] public int Id { get; set; }
+        [Required] public string Name { get; set; }
+        [Required] public string age { get; set; }
+
+        [Required] public string email { get; set; }
+
+        }
+    }

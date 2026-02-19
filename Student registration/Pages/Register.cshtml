@@ -1,0 +1,27 @@
+﻿@page
+@model WebApplication1.Pages.RegisterModel
+<h2>Student Registration Form</h2>
+<form method="post">
+    <div>
+        <label>Name:</label>
+        <input asp-for="student.Name" />
+        <span asp-validation-for="student.Name" style="color:red"></span>
+    </div>
+    <div>
+        <label>Age:</label>
+        <input asp-for="student.age" />
+        <span asp-validation-for="student.age" style="color:red"></span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="student.email" />
+        <span asp-validation-for="student.email" style="color:red"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+</form>
+@if (Model.Message != null)
+{
+    <p>@Model.Message"</p>
+}
